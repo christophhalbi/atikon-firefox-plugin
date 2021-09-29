@@ -24,11 +24,16 @@
 
         // jira
         const issueKeyReg = /https:\/\/atikon\.atlassian\.net\/browse\/(.*)$/;
+        const currentUrl = new URL(location.href);
+        const currentUrlWithoutParams = currentUrl.protocol + '//' + currentUrl.host + currentUrl.pathname;
 
-        const match = window.location.href.match(issueKeyReg);
+        const match = currentUrlWithoutParams.match(issueKeyReg);
 
         if (match) {
             url.searchParams.append('jira_issue', match[1] ?? '');
+        }
+        else if (currentUrl.searchParams.has('selectedIssue')) {
+            url.searchParams.append('jira_issue', currentUrl.searchParams.get('selectedIssue'));
         }
 
         window.open(url, '_blank');
