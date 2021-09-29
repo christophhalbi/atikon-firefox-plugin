@@ -1,0 +1,22 @@
+html, body {
+    width: 200px;
+}
+
+.hidden {
+    display: none;
+}
+
+#popup-content .group {
+    margin: 20px;
+}
+#popup-content .group > span {
+    border-bottom: 1px solid #CCC;
+}
+#popup-content .group > div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#popup-content input {
+    width: 80px;
+}
