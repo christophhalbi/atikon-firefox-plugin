@@ -1,8 +1,8 @@
 {
 
-  "description": "Atikon",
+  "description": "Atikon-Popup",
   "manifest_version": 2,
-  "name": "Atikon",
+  "name": "Atikon-Popup",
   "version": "1.0",
   "icons": {
     "48": "icons/48.png"
@@ -15,8 +15,14 @@
 
   "browser_action": {
     "default_icon": "icons/32.png",
-    "default_title": "Atikon",
+    "default_title": "Atikon-Popup",
     "default_popup": "popup/popup.html"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+        "id": "atikon-popup@atikon.com"
+    }
   }
 
 }
